@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8E4BF27818A773F800E106C2 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE609F18A672C0003AFD4A /* libGoogleAdMobAds.a */; };
 		8E4BF27D18A7786500E106C2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BF27C18A7786500E106C2 /* Settings.bundle */; };
+		8E4BF28018A7801500E106C2 /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4BF27F18A7801500E106C2 /* libAdapterIAd.a */; };
+		8E4BF28218A780B200E106C2 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4BF28118A780B200E106C2 /* iAd.framework */; };
 		8EC49C9318A7211200FBB7D4 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49C9218A7211200FBB7D4 /* CalendarView.m */; };
 		8EC49C9B18A7442700FBB7D4 /* CalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49C9A18A7442700FBB7D4 /* CalendarMonthHeaderCell.m */; };
 		8EC49CA818A7616E00FBB7D4 /* tab_calender.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC49CA418A7616E00FBB7D4 /* tab_calender.png */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		8E4BF27C18A7786500E106C2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8E4BF27F18A7801500E106C2 /* libAdapterIAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdapterIAd.a; path = NepalCalendarForIPhone/Libraries/libAdapterIAd.a; sourceTree = "<group>"; };
+		8E4BF28118A780B200E106C2 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8EC49C9118A7211200FBB7D4 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		8EC49C9218A7211200FBB7D4 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
 		8EC49C9918A7442700FBB7D4 /* CalendarMonthHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthHeaderCell.h; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		8EC49CA518A7616E00FBB7D4 /* tab_calender@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_calender@2x.png"; sourceTree = "<group>"; };
 		8EC49CA618A7616E00FBB7D4 /* tab_daily.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_daily.png; sourceTree = "<group>"; };
 		8EC49CA718A7616E00FBB7D4 /* tab_daily@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_daily@2x.png"; sourceTree = "<group>"; };
-		8EEE605018A66F4C003AFD4A /* Nepal Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nepal Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EEE605018A66F4C003AFD4A /* nCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEE605318A66F4C003AFD4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8EEE605518A66F4C003AFD4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8EEE605718A66F4C003AFD4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -129,6 +133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4BF28218A780B200E106C2 /* iAd.framework in Frameworks */,
+				8E4BF28018A7801500E106C2 /* libAdapterIAd.a in Frameworks */,
 				8E4BF27818A773F800E106C2 /* libGoogleAdMobAds.a in Frameworks */,
 				8EEE60BF18A68E12003AFD4A /* libTimesSquare.a in Frameworks */,
 				8EEE60A818A672FC003AFD4A /* AdSupport.framework in Frameworks */,
@@ -160,7 +166,7 @@
 		8EEE605118A66F4C003AFD4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8EEE605018A66F4C003AFD4A /* Nepal Calendar.app */,
+				8EEE605018A66F4C003AFD4A /* nCalendar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 		8EEE605218A66F4C003AFD4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E4BF28118A780B200E106C2 /* iAd.framework */,
+				8E4BF27F18A7801500E106C2 /* libAdapterIAd.a */,
 				8EEE60A118A672FC003AFD4A /* AdSupport.framework */,
 				8EEE60A218A672FC003AFD4A /* AudioToolbox.framework */,
 				8EEE60A318A672FC003AFD4A /* AVFoundation.framework */,
@@ -313,7 +321,7 @@
 			);
 			name = nCalendar;
 			productName = NepalCalendarForIPhone;
-			productReference = 8EEE605018A66F4C003AFD4A /* Nepal Calendar.app */;
+			productReference = 8EEE605018A66F4C003AFD4A /* nCalendar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
