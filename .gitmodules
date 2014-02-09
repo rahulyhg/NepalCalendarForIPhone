@@ -1,0 +1,3 @@
+[submodule "NepalCalendarForIPhone/objc-TimesSquare"]
+	path = NepalCalendarForIPhone/objc-TimesSquare
+	url = https://github.com/yhirano/objc-TimesSquare.git

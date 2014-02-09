@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E4BF27818A773F800E106C2 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE609F18A672C0003AFD4A /* libGoogleAdMobAds.a */; };
+		8E4BF27D18A7786500E106C2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BF27C18A7786500E106C2 /* Settings.bundle */; };
+		8EC49C9318A7211200FBB7D4 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49C9218A7211200FBB7D4 /* CalendarView.m */; };
+		8EC49C9B18A7442700FBB7D4 /* CalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49C9A18A7442700FBB7D4 /* CalendarMonthHeaderCell.m */; };
+		8EC49CA818A7616E00FBB7D4 /* tab_calender.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC49CA418A7616E00FBB7D4 /* tab_calender.png */; };
+		8EC49CA918A7616E00FBB7D4 /* tab_calender@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC49CA518A7616E00FBB7D4 /* tab_calender@2x.png */; };
+		8EC49CAA18A7616E00FBB7D4 /* tab_daily.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC49CA618A7616E00FBB7D4 /* tab_daily.png */; };
+		8EC49CAB18A7616E00FBB7D4 /* tab_daily@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC49CA718A7616E00FBB7D4 /* tab_daily@2x.png */; };
+		8EEE605418A66F4C003AFD4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE605318A66F4C003AFD4A /* Foundation.framework */; };
+		8EEE605618A66F4C003AFD4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE605518A66F4C003AFD4A /* CoreGraphics.framework */; };
+		8EEE605818A66F4C003AFD4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE605718A66F4C003AFD4A /* UIKit.framework */; };
+		8EEE605E18A66F4C003AFD4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE605C18A66F4C003AFD4A /* InfoPlist.strings */; };
+		8EEE606018A66F4C003AFD4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE605F18A66F4C003AFD4A /* main.m */; };
+		8EEE606718A66F4C003AFD4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE606518A66F4C003AFD4A /* Main.storyboard */; };
+		8EEE606C18A66F4C003AFD4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE606B18A66F4C003AFD4A /* Images.xcassets */; };
+		8EEE609B18A67247003AFD4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE608A18A67247003AFD4A /* AppDelegate.m */; };
+		8EEE609C18A67247003AFD4A /* DialyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE609618A67247003AFD4A /* DialyViewController.m */; };
+		8EEE609D18A67247003AFD4A /* NepalDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE609818A67247003AFD4A /* NepalDate.m */; };
+		8EEE609E18A67247003AFD4A /* NepalTimeConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE609A18A67247003AFD4A /* NepalTimeConfig.mm */; };
+		8EEE60A818A672FC003AFD4A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A118A672FC003AFD4A /* AdSupport.framework */; };
+		8EEE60A918A672FC003AFD4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A218A672FC003AFD4A /* AudioToolbox.framework */; };
+		8EEE60AA18A672FC003AFD4A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A318A672FC003AFD4A /* AVFoundation.framework */; };
+		8EEE60AB18A672FC003AFD4A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A418A672FC003AFD4A /* CoreTelephony.framework */; };
+		8EEE60AC18A672FC003AFD4A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A518A672FC003AFD4A /* MessageUI.framework */; };
+		8EEE60AD18A672FC003AFD4A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A618A672FC003AFD4A /* StoreKit.framework */; };
+		8EEE60AE18A672FC003AFD4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A718A672FC003AFD4A /* SystemConfiguration.framework */; };
+		8EEE60B218A6778B003AFD4A /* NepaliStringUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE60B118A6778B003AFD4A /* NepaliStringUtility.m */; };
+		8EEE60B518A6851D003AFD4A /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE60B418A6851D003AFD4A /* CalendarViewController.m */; };
+		8EEE60BF18A68E12003AFD4A /* libTimesSquare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60BE18A68AEB003AFD4A /* libTimesSquare.a */; };
+		8EEE60D018A693E4003AFD4A /* CalendarPreviousMonth.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60C618A693E4003AFD4A /* CalendarPreviousMonth.png */; };
+		8EEE60D118A693E4003AFD4A /* CalendarPreviousMonth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60C718A693E4003AFD4A /* CalendarPreviousMonth@2x.png */; };
+		8EEE60D218A693E4003AFD4A /* CalendarRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60C818A693E4003AFD4A /* CalendarRow.png */; };
+		8EEE60D318A693E4003AFD4A /* CalendarRow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60C918A693E4003AFD4A /* CalendarRow@2x.png */; };
+		8EEE60D418A693E4003AFD4A /* CalendarRowBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60CA18A693E4003AFD4A /* CalendarRowBottom.png */; };
+		8EEE60D518A693E4003AFD4A /* CalendarRowBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60CB18A693E4003AFD4A /* CalendarRowBottom@2x.png */; };
+		8EEE60D618A693E4003AFD4A /* CalendarSelectedDate.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60CC18A693E4003AFD4A /* CalendarSelectedDate.png */; };
+		8EEE60D718A693E4003AFD4A /* CalendarSelectedDate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60CD18A693E4003AFD4A /* CalendarSelectedDate@2x.png */; };
+		8EEE60D818A693E4003AFD4A /* CalendarTodaysDate.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60CE18A693E4003AFD4A /* CalendarTodaysDate.png */; };
+		8EEE60D918A693E4003AFD4A /* CalendarTodaysDate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE60CF18A693E4003AFD4A /* CalendarTodaysDate@2x.png */; };
+		8EEE60DC18A69477003AFD4A /* CalendarRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE60DB18A69477003AFD4A /* CalendarRowCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EEE60BD18A68AEB003AFD4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EEE60B818A68AEB003AFD4A /* TimesSquare.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A806805B16700FD70071C71E;
+			remoteInfo = TimesSquare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E4BF27C18A7786500E106C2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8EC49C9118A7211200FBB7D4 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		8EC49C9218A7211200FBB7D4 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		8EC49C9918A7442700FBB7D4 /* CalendarMonthHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthHeaderCell.h; sourceTree = "<group>"; };
+		8EC49C9A18A7442700FBB7D4 /* CalendarMonthHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMonthHeaderCell.m; sourceTree = "<group>"; };
+		8EC49CA418A7616E00FBB7D4 /* tab_calender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_calender.png; sourceTree = "<group>"; };
+		8EC49CA518A7616E00FBB7D4 /* tab_calender@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_calender@2x.png"; sourceTree = "<group>"; };
+		8EC49CA618A7616E00FBB7D4 /* tab_daily.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_daily.png; sourceTree = "<group>"; };
+		8EC49CA718A7616E00FBB7D4 /* tab_daily@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_daily@2x.png"; sourceTree = "<group>"; };
+		8EEE605018A66F4C003AFD4A /* Nepal Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nepal Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EEE605318A66F4C003AFD4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8EEE605518A66F4C003AFD4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8EEE605718A66F4C003AFD4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8EEE605B18A66F4C003AFD4A /* NepalCalendarForIPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NepalCalendarForIPhone-Info.plist"; sourceTree = "<group>"; };
+		8EEE605D18A66F4C003AFD4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8EEE605F18A66F4C003AFD4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EEE606118A66F4C003AFD4A /* NepalCalendarForIPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NepalCalendarForIPhone-Prefix.pch"; sourceTree = "<group>"; };
+		8EEE606618A66F4C003AFD4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EEE606B18A66F4C003AFD4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8EEE607218A66F4C003AFD4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8EEE608918A67247003AFD4A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8EEE608A18A67247003AFD4A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8EEE608C18A67247003AFD4A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		8EEE608D18A67247003AFD4A /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		8EEE608E18A67247003AFD4A /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		8EEE608F18A67247003AFD4A /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		8EEE609018A67247003AFD4A /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		8EEE609118A67247003AFD4A /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		8EEE609218A67247003AFD4A /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		8EEE609318A67247003AFD4A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		8EEE609418A67247003AFD4A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		8EEE609518A67247003AFD4A /* DialyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialyViewController.h; sourceTree = "<group>"; };
+		8EEE609618A67247003AFD4A /* DialyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialyViewController.m; sourceTree = "<group>"; };
+		8EEE609718A67247003AFD4A /* NepalDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NepalDate.h; sourceTree = "<group>"; };
+		8EEE609818A67247003AFD4A /* NepalDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NepalDate.m; sourceTree = "<group>"; };
+		8EEE609918A67247003AFD4A /* NepalTimeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NepalTimeConfig.h; sourceTree = "<group>"; };
+		8EEE609A18A67247003AFD4A /* NepalTimeConfig.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NepalTimeConfig.mm; sourceTree = "<group>"; };
+		8EEE609F18A672C0003AFD4A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = NepalCalendarForIPhone/Libraries/libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		8EEE60A118A672FC003AFD4A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		8EEE60A218A672FC003AFD4A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8EEE60A318A672FC003AFD4A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8EEE60A418A672FC003AFD4A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8EEE60A518A672FC003AFD4A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8EEE60A618A672FC003AFD4A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8EEE60A718A672FC003AFD4A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8EEE60B018A6778B003AFD4A /* NepaliStringUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NepaliStringUtility.h; sourceTree = "<group>"; };
+		8EEE60B118A6778B003AFD4A /* NepaliStringUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NepaliStringUtility.m; sourceTree = "<group>"; };
+		8EEE60B318A6851D003AFD4A /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		8EEE60B418A6851D003AFD4A /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		8EEE60B818A68AEB003AFD4A /* TimesSquare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TimesSquare.xcodeproj; path = "objc-TimesSquare/TimesSquare.xcodeproj"; sourceTree = "<group>"; };
+		8EEE60C618A693E4003AFD4A /* CalendarPreviousMonth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarPreviousMonth.png; sourceTree = "<group>"; };
+		8EEE60C718A693E4003AFD4A /* CalendarPreviousMonth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalendarPreviousMonth@2x.png"; sourceTree = "<group>"; };
+		8EEE60C818A693E4003AFD4A /* CalendarRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarRow.png; sourceTree = "<group>"; };
+		8EEE60C918A693E4003AFD4A /* CalendarRow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalendarRow@2x.png"; sourceTree = "<group>"; };
+		8EEE60CA18A693E4003AFD4A /* CalendarRowBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarRowBottom.png; sourceTree = "<group>"; };
+		8EEE60CB18A693E4003AFD4A /* CalendarRowBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalendarRowBottom@2x.png"; sourceTree = "<group>"; };
+		8EEE60CC18A693E4003AFD4A /* CalendarSelectedDate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarSelectedDate.png; sourceTree = "<group>"; };
+		8EEE60CD18A693E4003AFD4A /* CalendarSelectedDate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalendarSelectedDate@2x.png"; sourceTree = "<group>"; };
+		8EEE60CE18A693E4003AFD4A /* CalendarTodaysDate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarTodaysDate.png; sourceTree = "<group>"; };
+		8EEE60CF18A693E4003AFD4A /* CalendarTodaysDate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalendarTodaysDate@2x.png"; sourceTree = "<group>"; };
+		8EEE60DA18A69477003AFD4A /* CalendarRowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarRowCell.h; sourceTree = "<group>"; };
+		8EEE60DB18A69477003AFD4A /* CalendarRowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarRowCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EEE604D18A66F4C003AFD4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E4BF27818A773F800E106C2 /* libGoogleAdMobAds.a in Frameworks */,
+				8EEE60BF18A68E12003AFD4A /* libTimesSquare.a in Frameworks */,
+				8EEE60A818A672FC003AFD4A /* AdSupport.framework in Frameworks */,
+				8EEE60A918A672FC003AFD4A /* AudioToolbox.framework in Frameworks */,
+				8EEE60AA18A672FC003AFD4A /* AVFoundation.framework in Frameworks */,
+				8EEE60AB18A672FC003AFD4A /* CoreTelephony.framework in Frameworks */,
+				8EEE60AC18A672FC003AFD4A /* MessageUI.framework in Frameworks */,
+				8EEE60AD18A672FC003AFD4A /* StoreKit.framework in Frameworks */,
+				8EEE60AE18A672FC003AFD4A /* SystemConfiguration.framework in Frameworks */,
+				8EEE605618A66F4C003AFD4A /* CoreGraphics.framework in Frameworks */,
+				8EEE605818A66F4C003AFD4A /* UIKit.framework in Frameworks */,
+				8EEE605418A66F4C003AFD4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EEE604718A66F4C003AFD4A = {
+			isa = PBXGroup;
+			children = (
+				8EEE605918A66F4C003AFD4A /* NepalCalendarForIPhone */,
+				8EEE60B818A68AEB003AFD4A /* TimesSquare.xcodeproj */,
+				8EEE605218A66F4C003AFD4A /* Frameworks */,
+				8EEE605118A66F4C003AFD4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8EEE605118A66F4C003AFD4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE605018A66F4C003AFD4A /* Nepal Calendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EEE605218A66F4C003AFD4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE60A118A672FC003AFD4A /* AdSupport.framework */,
+				8EEE60A218A672FC003AFD4A /* AudioToolbox.framework */,
+				8EEE60A318A672FC003AFD4A /* AVFoundation.framework */,
+				8EEE60A418A672FC003AFD4A /* CoreTelephony.framework */,
+				8EEE60A518A672FC003AFD4A /* MessageUI.framework */,
+				8EEE60A618A672FC003AFD4A /* StoreKit.framework */,
+				8EEE60A718A672FC003AFD4A /* SystemConfiguration.framework */,
+				8EEE609F18A672C0003AFD4A /* libGoogleAdMobAds.a */,
+				8EEE605318A66F4C003AFD4A /* Foundation.framework */,
+				8EEE605518A66F4C003AFD4A /* CoreGraphics.framework */,
+				8EEE605718A66F4C003AFD4A /* UIKit.framework */,
+				8EEE607218A66F4C003AFD4A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EEE605918A66F4C003AFD4A /* NepalCalendarForIPhone */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE608818A670B0003AFD4A /* Source */,
+				8EEE60C218A6934F003AFD4A /* Resource */,
+				8EEE606518A66F4C003AFD4A /* Main.storyboard */,
+				8EEE606B18A66F4C003AFD4A /* Images.xcassets */,
+				8EEE605A18A66F4C003AFD4A /* Supporting Files */,
+			);
+			path = NepalCalendarForIPhone;
+			sourceTree = "<group>";
+		};
+		8EEE605A18A66F4C003AFD4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE605B18A66F4C003AFD4A /* NepalCalendarForIPhone-Info.plist */,
+				8EEE605C18A66F4C003AFD4A /* InfoPlist.strings */,
+				8EEE605F18A66F4C003AFD4A /* main.m */,
+				8EEE606118A66F4C003AFD4A /* NepalCalendarForIPhone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EEE608818A670B0003AFD4A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE608B18A67247003AFD4A /* GoogleAdMobAds */,
+				8EEE60AF18A6759D003AFD4A /* NepalDate */,
+				8EEE609918A67247003AFD4A /* NepalTimeConfig.h */,
+				8EEE609A18A67247003AFD4A /* NepalTimeConfig.mm */,
+				8EEE608918A67247003AFD4A /* AppDelegate.h */,
+				8EEE608A18A67247003AFD4A /* AppDelegate.m */,
+				8EEE609518A67247003AFD4A /* DialyViewController.h */,
+				8EEE609618A67247003AFD4A /* DialyViewController.m */,
+				8EEE60B318A6851D003AFD4A /* CalendarViewController.h */,
+				8EEE60B418A6851D003AFD4A /* CalendarViewController.m */,
+				8EC49C9118A7211200FBB7D4 /* CalendarView.h */,
+				8EC49C9218A7211200FBB7D4 /* CalendarView.m */,
+				8EC49C9918A7442700FBB7D4 /* CalendarMonthHeaderCell.h */,
+				8EC49C9A18A7442700FBB7D4 /* CalendarMonthHeaderCell.m */,
+				8EEE60DA18A69477003AFD4A /* CalendarRowCell.h */,
+				8EEE60DB18A69477003AFD4A /* CalendarRowCell.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8EEE608B18A67247003AFD4A /* GoogleAdMobAds */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE608C18A67247003AFD4A /* GADAdMobExtras.h */,
+				8EEE608D18A67247003AFD4A /* GADAdNetworkExtras.h */,
+				8EEE608E18A67247003AFD4A /* GADAdSize.h */,
+				8EEE608F18A67247003AFD4A /* GADBannerView.h */,
+				8EEE609018A67247003AFD4A /* GADBannerViewDelegate.h */,
+				8EEE609118A67247003AFD4A /* GADInterstitial.h */,
+				8EEE609218A67247003AFD4A /* GADInterstitialDelegate.h */,
+				8EEE609318A67247003AFD4A /* GADRequest.h */,
+				8EEE609418A67247003AFD4A /* GADRequestError.h */,
+			);
+			path = GoogleAdMobAds;
+			sourceTree = "<group>";
+		};
+		8EEE60AF18A6759D003AFD4A /* NepalDate */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE609718A67247003AFD4A /* NepalDate.h */,
+				8EEE609818A67247003AFD4A /* NepalDate.m */,
+				8EEE60B018A6778B003AFD4A /* NepaliStringUtility.h */,
+				8EEE60B118A6778B003AFD4A /* NepaliStringUtility.m */,
+			);
+			path = NepalDate;
+			sourceTree = "<group>";
+		};
+		8EEE60B918A68AEB003AFD4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE60BE18A68AEB003AFD4A /* libTimesSquare.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EEE60C218A6934F003AFD4A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8E4BF27C18A7786500E106C2 /* Settings.bundle */,
+				8EEE60C518A693E4003AFD4A /* images */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8EEE60C518A693E4003AFD4A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE60C618A693E4003AFD4A /* CalendarPreviousMonth.png */,
+				8EEE60C718A693E4003AFD4A /* CalendarPreviousMonth@2x.png */,
+				8EEE60C818A693E4003AFD4A /* CalendarRow.png */,
+				8EEE60C918A693E4003AFD4A /* CalendarRow@2x.png */,
+				8EEE60CA18A693E4003AFD4A /* CalendarRowBottom.png */,
+				8EEE60CB18A693E4003AFD4A /* CalendarRowBottom@2x.png */,
+				8EEE60CC18A693E4003AFD4A /* CalendarSelectedDate.png */,
+				8EEE60CD18A693E4003AFD4A /* CalendarSelectedDate@2x.png */,
+				8EEE60CE18A693E4003AFD4A /* CalendarTodaysDate.png */,
+				8EEE60CF18A693E4003AFD4A /* CalendarTodaysDate@2x.png */,
+				8EC49CA418A7616E00FBB7D4 /* tab_calender.png */,
+				8EC49CA518A7616E00FBB7D4 /* tab_calender@2x.png */,
+				8EC49CA618A7616E00FBB7D4 /* tab_daily.png */,
+				8EC49CA718A7616E00FBB7D4 /* tab_daily@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EEE604F18A66F4C003AFD4A /* nCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EEE608218A66F4C003AFD4A /* Build configuration list for PBXNativeTarget "nCalendar" */;
+			buildPhases = (
+				8EEE604C18A66F4C003AFD4A /* Sources */,
+				8EEE604D18A66F4C003AFD4A /* Frameworks */,
+				8E4BF27E18A779C700E106C2 /* ShellScript */,
+				8EEE604E18A66F4C003AFD4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nCalendar;
+			productName = NepalCalendarForIPhone;
+			productReference = 8EEE605018A66F4C003AFD4A /* Nepal Calendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EEE604818A66F4C003AFD4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "";
+			};
+			buildConfigurationList = 8EEE604B18A66F4C003AFD4A /* Build configuration list for PBXProject "NepalCalendarForIPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EEE604718A66F4C003AFD4A;
+			productRefGroup = 8EEE605118A66F4C003AFD4A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8EEE60B918A68AEB003AFD4A /* Products */;
+					ProjectRef = 8EEE60B818A68AEB003AFD4A /* TimesSquare.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8EEE604F18A66F4C003AFD4A /* nCalendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8EEE60BE18A68AEB003AFD4A /* libTimesSquare.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTimesSquare.a;
+			remoteRef = 8EEE60BD18A68AEB003AFD4A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EEE604E18A66F4C003AFD4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC49CAA18A7616E00FBB7D4 /* tab_daily.png in Resources */,
+				8EEE60D518A693E4003AFD4A /* CalendarRowBottom@2x.png in Resources */,
+				8EEE606C18A66F4C003AFD4A /* Images.xcassets in Resources */,
+				8EEE60D318A693E4003AFD4A /* CalendarRow@2x.png in Resources */,
+				8EC49CA818A7616E00FBB7D4 /* tab_calender.png in Resources */,
+				8EC49CAB18A7616E00FBB7D4 /* tab_daily@2x.png in Resources */,
+				8EEE605E18A66F4C003AFD4A /* InfoPlist.strings in Resources */,
+				8EEE60D918A693E4003AFD4A /* CalendarTodaysDate@2x.png in Resources */,
+				8EC49CA918A7616E00FBB7D4 /* tab_calender@2x.png in Resources */,
+				8EEE60D618A693E4003AFD4A /* CalendarSelectedDate.png in Resources */,
+				8EEE60D718A693E4003AFD4A /* CalendarSelectedDate@2x.png in Resources */,
+				8EEE60D118A693E4003AFD4A /* CalendarPreviousMonth@2x.png in Resources */,
+				8EEE60D018A693E4003AFD4A /* CalendarPreviousMonth.png in Resources */,
+				8EEE60D818A693E4003AFD4A /* CalendarTodaysDate.png in Resources */,
+				8EEE60D218A693E4003AFD4A /* CalendarRow.png in Resources */,
+				8EEE606718A66F4C003AFD4A /* Main.storyboard in Resources */,
+				8E4BF27D18A7786500E106C2 /* Settings.bundle in Resources */,
+				8EEE60D418A693E4003AFD4A /* CalendarRowBottom.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E4BF27E18A779C700E106C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "VersionNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"./NepalCalendarForIPhone/NepalCalendarForIPhone-Info.plist\")\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:0:DefaultValue ${VersionNumber}\" ./NepalCalendarForIPhone/Resource/Settings.bundle/Root.plist";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EEE604C18A66F4C003AFD4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EEE609D18A67247003AFD4A /* NepalDate.m in Sources */,
+				8EEE609B18A67247003AFD4A /* AppDelegate.m in Sources */,
+				8EEE609C18A67247003AFD4A /* DialyViewController.m in Sources */,
+				8EC49C9B18A7442700FBB7D4 /* CalendarMonthHeaderCell.m in Sources */,
+				8EC49C9318A7211200FBB7D4 /* CalendarView.m in Sources */,
+				8EEE606018A66F4C003AFD4A /* main.m in Sources */,
+				8EEE60B218A6778B003AFD4A /* NepaliStringUtility.m in Sources */,
+				8EEE609E18A67247003AFD4A /* NepalTimeConfig.mm in Sources */,
+				8EEE60DC18A69477003AFD4A /* CalendarRowCell.m in Sources */,
+				8EEE60B518A6851D003AFD4A /* CalendarViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8EEE605C18A66F4C003AFD4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EEE605D18A66F4C003AFD4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8EEE606518A66F4C003AFD4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EEE606618A66F4C003AFD4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EEE608018A66F4C003AFD4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8EEE608118A66F4C003AFD4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EEE608318A66F4C003AFD4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NepalCalendarForIPhone/NepalCalendarForIPhone-Prefix.pch";
+				INFOPLIST_FILE = "NepalCalendarForIPhone/NepalCalendarForIPhone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/NepalCalendarForIPhone/Libraries",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8EEE608418A66F4C003AFD4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NepalCalendarForIPhone/NepalCalendarForIPhone-Prefix.pch";
+				INFOPLIST_FILE = "NepalCalendarForIPhone/NepalCalendarForIPhone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/NepalCalendarForIPhone/Libraries",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EEE604B18A66F4C003AFD4A /* Build configuration list for PBXProject "NepalCalendarForIPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EEE608018A66F4C003AFD4A /* Debug */,
+				8EEE608118A66F4C003AFD4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EEE608218A66F4C003AFD4A /* Build configuration list for PBXNativeTarget "nCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EEE608318A66F4C003AFD4A /* Debug */,
+				8EEE608418A66F4C003AFD4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8EEE604818A66F4C003AFD4A /* Project object */;
+}
