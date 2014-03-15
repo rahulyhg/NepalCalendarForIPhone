@@ -168,14 +168,8 @@
 {
     NSMutableString *result = [NSMutableString string];
 
-    NSInteger day;
-    {
-        NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:date];
-        day = [components day];
-    }
-
     NepalDate *nepalDate = [[NepalDate alloc] initWithDate:date nepalTimeZone:NO];
-    if (nepalDate.nepalDay == 1 || day == 1) {
+    if (nepalDate.nepalDay == 1) {
         [result appendString:[NepaliStringUtility stringToNepaliMonth:nepalDate.nepalMonth]];
     }
     [result appendFormat:@"\n%@", [NepaliStringUtility stringToNelaliFromNumber:nepalDate.nepalDay]];
