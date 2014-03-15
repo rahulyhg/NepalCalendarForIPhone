@@ -59,7 +59,6 @@
         calendarView.firstDate = [[self class] dateAfterYears:-2 from:nowDate]; // 2 years ago
         calendarView.lastDate = [[self class] dateAfterYears:2 from:nowDate]; // 2 years leter
         calendarView.backgroundColor = CALENDAR_BACKGROUND_COLOR;
-        calendarView.pagingEnabled = YES;
         CGFloat onePixel = 1.0f / [UIScreen mainScreen].scale;
         calendarView.contentInset = UIEdgeInsetsMake(0.0f, onePixel, 0.0f, onePixel);
         [_calendarPositionView addSubview:calendarView];
