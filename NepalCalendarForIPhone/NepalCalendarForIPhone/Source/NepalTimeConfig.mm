@@ -24,7 +24,9 @@
 
 #pragma mark - Common config
 
-/// カレンダーの背景色
+/// Calendar background color.
 UIColor * const CALENDAR_BACKGROUND_COLOR = [UIColor colorWithRed:0.84f green:0.85f blue:0.86f alpha:1.0f];
+
+const CGFloat AD_VIEW_ANIMATION_DURATION = 0.4f;
 
 NSString * const ADMOB_UNIT_ID = nil;

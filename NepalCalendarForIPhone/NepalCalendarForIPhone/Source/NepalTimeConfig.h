@@ -24,7 +24,9 @@
 
 #pragma mark - Common config
 
-/// カレンダーの背景色
+/// Calendar background color.
 FOUNDATION_EXPORT UIColor * const CALENDAR_BACKGROUND_COLOR;
+
+FOUNDATION_EXPORT const CGFloat AD_VIEW_ANIMATION_DURATION;
 
 FOUNDATION_EXPORT NSString * const ADMOB_UNIT_ID;

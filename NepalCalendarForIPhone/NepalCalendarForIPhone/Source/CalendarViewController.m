@@ -36,6 +36,8 @@
 {
     __weak CalendarView *_calendarView;
     __weak GADBannerView *_adMobView;
+
+    BOOL isVisibleAdBanner_;
 }
 
 - (void)viewDidLoad
@@ -78,18 +80,6 @@
         
         [_adMobView loadRequest:[GADRequest request]];
     }
-    // Remove ad.
-    else {
-        CGRect frame = _calendarPositionView.frame;
-        frame.size.height += _adPositionView.frame.size.height;
-        _calendarPositionView.frame = frame;
-
-        frame = _calendarView.frame;
-        frame.size.height += _adPositionView.frame.size.height;
-        _calendarView.frame = frame;
-
-        [_adPositionView removeFromSuperview];
-    }
 }
 
 - (void)viewDidLayoutSubviews
@@ -116,6 +106,60 @@
     
     return [calendar dateByAddingComponents:component toDate:from options:0];
 
+}
+
+#pragma mark - GADBannerViewDelegate method
+
+- (void)adViewDidReceiveAd:(GADBannerView *)view
+{
+#if DEBUG
+    NSLog(@"adMobView succeed loading.");
+#endif // #if DEBUG
+    
+    if (isVisibleAdBanner_ == NO) {
+        [UIView animateWithDuration:AD_VIEW_ANIMATION_DURATION
+                              delay:0
+                            options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             CGRect frame = _adPositionView.frame;
+                             frame.origin.y -= _adPositionView.frame.size.height;
+                             _adPositionView.frame = frame;
+                         }
+                         completion:^(BOOL finished) {
+                             if (finished) {
+                                 // Shrink calendar view
+                                 CGRect frame = _calendarView.frame;
+                                 frame.size.height -= _adPositionView.frame.size.height;
+                                 _calendarView.frame = frame;
+                             }
+                         }];
+        isVisibleAdBanner_ = YES;
+    }
+}
+
+- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
+{
+#if DEBUG
+    NSLog(@"adMobView failed loading. error:%@", [error localizedDescription]);
+#endif // #if DEBUG
+    
+    if (isVisibleAdBanner_) {
+        // Strech calendar view
+        CGRect frame = _calendarView.frame;
+        frame.size.height += _adPositionView.frame.size.height;
+        _calendarView.frame = frame;
+        
+        [UIView animateWithDuration:AD_VIEW_ANIMATION_DURATION
+                              delay:0
+                            options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             CGRect frame = _adPositionView.frame;
+                             frame.origin.y += _adPositionView.frame.size.height;
+                             _adPositionView.frame = frame;
+                         }
+                         completion:nil];
+        isVisibleAdBanner_ = NO;
+    }
 }
 
 @end
