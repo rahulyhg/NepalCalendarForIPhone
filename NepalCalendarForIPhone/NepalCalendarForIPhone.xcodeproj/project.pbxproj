@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3E60CF18D3E19E00964844 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3E60CE18D3E19E00964844 /* BaseViewController.m */; };
 		8E4BF27818A773F800E106C2 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE609F18A672C0003AFD4A /* libGoogleAdMobAds.a */; };
 		8E4BF27D18A7786500E106C2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BF27C18A7786500E106C2 /* Settings.bundle */; };
 		8E4BF28018A7801500E106C2 /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4BF27F18A7801500E106C2 /* libAdapterIAd.a */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E3E60CD18D3E19E00964844 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8E3E60CE18D3E19E00964844 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8E4BF27C18A7786500E106C2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8E4BF27F18A7801500E106C2 /* libAdapterIAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdapterIAd.a; path = NepalCalendarForIPhone/Libraries/libAdapterIAd.a; sourceTree = "<group>"; };
 		8E4BF28118A780B200E106C2 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -224,6 +227,8 @@
 				8EEE609A18A67247003AFD4A /* NepalTimeConfig.mm */,
 				8EEE608918A67247003AFD4A /* AppDelegate.h */,
 				8EEE608A18A67247003AFD4A /* AppDelegate.m */,
+				8E3E60CD18D3E19E00964844 /* BaseViewController.h */,
+				8E3E60CE18D3E19E00964844 /* BaseViewController.m */,
 				8EEE609518A67247003AFD4A /* DialyViewController.h */,
 				8EEE609618A67247003AFD4A /* DialyViewController.m */,
 				8EEE60B318A6851D003AFD4A /* CalendarViewController.h */,
@@ -418,6 +423,7 @@
 			files = (
 				8EEE609D18A67247003AFD4A /* NepalDate.m in Sources */,
 				8EEE609B18A67247003AFD4A /* AppDelegate.m in Sources */,
+				8E3E60CF18D3E19E00964844 /* BaseViewController.m in Sources */,
 				8EEE609C18A67247003AFD4A /* DialyViewController.m in Sources */,
 				8EC49C9B18A7442700FBB7D4 /* CalendarMonthHeaderCell.m in Sources */,
 				8EC49C9318A7211200FBB7D4 /* CalendarView.m in Sources */,

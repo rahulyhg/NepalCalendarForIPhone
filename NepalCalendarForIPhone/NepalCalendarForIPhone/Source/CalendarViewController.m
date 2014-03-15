@@ -101,6 +101,11 @@
     [_calendarView scrollToDate:[NSDate date] animated:NO];
 }
 
+- (void)scrollCalendarToDate:(NSDate*)date animated:(BOOL)animated
+{
+    [_calendarView scrollToDate:date animated:animated];
+}
+
 #pragma mark - Private methods
 
 + (NSDate*)dateAfterYears:(NSInteger)years from:(NSDate*)from
