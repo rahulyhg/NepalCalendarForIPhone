@@ -22,7 +22,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DialyViewController : UIViewController
+@interface DailyViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *calendarPositionView;
 

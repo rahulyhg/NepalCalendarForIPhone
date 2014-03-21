@@ -26,7 +26,7 @@
 		8EEE606718A66F4C003AFD4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE606518A66F4C003AFD4A /* Main.storyboard */; };
 		8EEE606C18A66F4C003AFD4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEE606B18A66F4C003AFD4A /* Images.xcassets */; };
 		8EEE609B18A67247003AFD4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE608A18A67247003AFD4A /* AppDelegate.m */; };
-		8EEE609C18A67247003AFD4A /* DialyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE609618A67247003AFD4A /* DialyViewController.m */; };
+		8EEE609C18A67247003AFD4A /* DailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE609618A67247003AFD4A /* DailyViewController.m */; };
 		8EEE609D18A67247003AFD4A /* NepalDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE609818A67247003AFD4A /* NepalDate.m */; };
 		8EEE609E18A67247003AFD4A /* NepalTimeConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE609A18A67247003AFD4A /* NepalTimeConfig.mm */; };
 		8EEE60A818A672FC003AFD4A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE60A118A672FC003AFD4A /* AdSupport.framework */; };
@@ -98,8 +98,8 @@
 		8EEE609218A67247003AFD4A /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
 		8EEE609318A67247003AFD4A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
 		8EEE609418A67247003AFD4A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		8EEE609518A67247003AFD4A /* DialyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialyViewController.h; sourceTree = "<group>"; };
-		8EEE609618A67247003AFD4A /* DialyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialyViewController.m; sourceTree = "<group>"; };
+		8EEE609518A67247003AFD4A /* DailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyViewController.h; sourceTree = "<group>"; };
+		8EEE609618A67247003AFD4A /* DailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyViewController.m; sourceTree = "<group>"; };
 		8EEE609718A67247003AFD4A /* NepalDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NepalDate.h; sourceTree = "<group>"; };
 		8EEE609818A67247003AFD4A /* NepalDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NepalDate.m; sourceTree = "<group>"; };
 		8EEE609918A67247003AFD4A /* NepalTimeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NepalTimeConfig.h; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 				8EEE608A18A67247003AFD4A /* AppDelegate.m */,
 				8E3E60CD18D3E19E00964844 /* BaseViewController.h */,
 				8E3E60CE18D3E19E00964844 /* BaseViewController.m */,
-				8EEE609518A67247003AFD4A /* DialyViewController.h */,
-				8EEE609618A67247003AFD4A /* DialyViewController.m */,
+				8EEE609518A67247003AFD4A /* DailyViewController.h */,
+				8EEE609618A67247003AFD4A /* DailyViewController.m */,
 				8EEE60B318A6851D003AFD4A /* CalendarViewController.h */,
 				8EEE60B418A6851D003AFD4A /* CalendarViewController.m */,
 				8EC49C9118A7211200FBB7D4 /* CalendarView.h */,
@@ -424,7 +424,7 @@
 				8EEE609D18A67247003AFD4A /* NepalDate.m in Sources */,
 				8EEE609B18A67247003AFD4A /* AppDelegate.m in Sources */,
 				8E3E60CF18D3E19E00964844 /* BaseViewController.m in Sources */,
-				8EEE609C18A67247003AFD4A /* DialyViewController.m in Sources */,
+				8EEE609C18A67247003AFD4A /* DailyViewController.m in Sources */,
 				8EC49C9B18A7442700FBB7D4 /* CalendarMonthHeaderCell.m in Sources */,
 				8EC49C9318A7211200FBB7D4 /* CalendarView.m in Sources */,
 				8EEE606018A66F4C003AFD4A /* main.m in Sources */,

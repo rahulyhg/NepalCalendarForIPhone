@@ -20,17 +20,17 @@
  * THE SOFTWARE.
  */
 
-#import "DialyViewController.h"
+#import "DailyViewController.h"
 #import "GoogleAdMobAds/GADBannerView.h"
 #import "NepalDate/NepalDate.h"
 #import "NepalDate/NepaliStringUtility.h"
 #import "NepalTimeConfig.h"
 
-@interface DialyViewController () <GADBannerViewDelegate>
+@interface DailyViewController () <GADBannerViewDelegate>
 
 @end
 
-@implementation DialyViewController
+@implementation DailyViewController
 {
     __weak GADBannerView *_adMobView;
     
