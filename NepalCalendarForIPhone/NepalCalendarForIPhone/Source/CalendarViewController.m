@@ -121,17 +121,16 @@
                               delay:0
                             options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseInOut
                          animations:^{
+                             // Move adPositionView
                              CGRect frame = _adPositionView.frame;
                              frame.origin.y -= _adPositionView.frame.size.height;
                              _adPositionView.frame = frame;
                          }
                          completion:^(BOOL finished) {
-                             if (finished) {
-                                 // Shrink calendar view
-                                 CGRect frame = _calendarView.frame;
-                                 frame.size.height -= _adPositionView.frame.size.height;
-                                 _calendarView.frame = frame;
-                             }
+                             // Shrink calendar view
+                             CGRect frame = _calendarView.frame;
+                             frame.size.height -= _adPositionView.frame.size.height;
+                             _calendarView.frame = frame;
                          }];
         _isVisibleAdBanner = YES;
     }
@@ -153,6 +152,7 @@
                               delay:0
                             options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseInOut
                          animations:^{
+                             // Move adPositionView
                              CGRect frame = _adPositionView.frame;
                              frame.origin.y += _adPositionView.frame.size.height;
                              _adPositionView.frame = frame;
