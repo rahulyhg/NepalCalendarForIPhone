@@ -37,7 +37,7 @@
     __weak CalendarView *_calendarView;
     __weak GADBannerView *_adMobView;
 
-    BOOL isVisibleAdBanner_;
+    BOOL _isVisibleAdBanner;
 }
 
 - (void)viewDidLoad
@@ -116,7 +116,7 @@
     NSLog(@"adMobView succeed loading.");
 #endif // #if DEBUG
     
-    if (isVisibleAdBanner_ == NO) {
+    if (_isVisibleAdBanner == NO) {
         [UIView animateWithDuration:AD_VIEW_ANIMATION_DURATION
                               delay:0
                             options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseInOut
@@ -133,7 +133,7 @@
                                  _calendarView.frame = frame;
                              }
                          }];
-        isVisibleAdBanner_ = YES;
+        _isVisibleAdBanner = YES;
     }
 }
 
@@ -143,7 +143,7 @@
     NSLog(@"adMobView failed loading. error:%@", [error localizedDescription]);
 #endif // #if DEBUG
     
-    if (isVisibleAdBanner_) {
+    if (_isVisibleAdBanner) {
         // Strech calendar view
         CGRect frame = _calendarView.frame;
         frame.size.height += _adPositionView.frame.size.height;
@@ -158,7 +158,7 @@
                              _adPositionView.frame = frame;
                          }
                          completion:nil];
-        isVisibleAdBanner_ = NO;
+        _isVisibleAdBanner = NO;
     }
 }
 
