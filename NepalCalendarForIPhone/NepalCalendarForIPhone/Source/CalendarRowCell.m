@@ -125,6 +125,7 @@
     NSString *title = [NSString stringWithFormat:@"%@\n%@", [self stringOfGregorianDay:date],
                                                             [self stringOfNepaliDay:date]];
     [button setTitle:title forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateDisabled];
 }
 
 - (void)setAccessibilityLabelToDayButton:(UIButton*)button date:(NSDate*)date
