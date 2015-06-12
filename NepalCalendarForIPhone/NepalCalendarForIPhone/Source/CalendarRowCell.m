@@ -170,7 +170,7 @@
     NSMutableString *result = [NSMutableString string];
 
     NepalDate *nepalDate = [[NepalDate alloc] initWithDate:date nepalTimeZone:NO];
-    if (nepalDate.nepalDay == 1) {
+    if (nepalDate.nepalDay == 1 || [[self class] isTodayWithDate:date]) {
         [result appendString:[NepaliStringUtility stringToNepaliMonth:nepalDate.nepalMonth]];
     }
     [result appendFormat:@"\n%@", [NepaliStringUtility stringToNelaliFromNumber:nepalDate.nepalDay]];
@@ -194,6 +194,17 @@
     [result appendFormat:@" %@", [NepaliStringUtility stringToNelaliFromNumber:nepalDate.nepalDay]];
 
     return [NSString stringWithString:result];
+}
+
++ (BOOL)isTodayWithDate:(NSDate*)date
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:date];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    
+    return [today isEqualToDate:otherDate];
 }
 
 @end
