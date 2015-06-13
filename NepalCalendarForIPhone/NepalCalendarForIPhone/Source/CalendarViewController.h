@@ -26,7 +26,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *calendarPositionView;
 
-@property (weak, nonatomic) IBOutlet UIView *adPositionView;
+@property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 
 - (void)scrollCalendarToDate:(NSDate*)date animated:(BOOL)animated;
 

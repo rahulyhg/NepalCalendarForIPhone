@@ -20,6 +20,7 @@
  * THE SOFTWARE.
  */
 
+#import <EventKitUI/EventKitUI.h>
 #import <TimesSquare/TimesSquare.h>
 #import "CalendarViewController.h"
 #import "GoogleAdMobAds/GADBannerView.h"
@@ -27,17 +28,20 @@
 #import "CalendarView.h"
 #import "CalendarMonthHeaderCell.h"
 #import "CalendarRowCell.h"
+#import "ScheduleTableViewCell.h"
 
-@interface CalendarViewController () <GADBannerViewDelegate>
+@interface CalendarViewController () <UITableViewDataSource, UITableViewDelegate, TSQCalendarViewDelegate>
 
 @end
 
 @implementation CalendarViewController
 {
     __weak CalendarView *_calendarView;
-    __weak GADBannerView *_adMobView;
 
-    BOOL _isVisibleAdBanner;
+    EKEventStore *_eventStore;
+    BOOL _isAlreadyShowAlertForCalendarPermmision;
+    NSDate *_firstDate;
+    NSDate *_lastDate;
 }
 
 - (void)viewDidLoad
@@ -54,32 +58,28 @@
         }
         
         CalendarView *calendarView = [[CalendarView alloc] initWithFrame:frame];
+        calendarView.delegate = self;
         calendarView.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         calendarView.headerCellClass = [CalendarMonthHeaderCell class];
         calendarView.rowCellClass = [CalendarRowCell class];
         NSDate *nowDate = [NSDate date];
-        calendarView.firstDate = [[self class] dateAfterYears:-2 from:nowDate]; // 2 years ago
-        calendarView.lastDate = [[self class] dateAfterYears:2 from:nowDate]; // 2 years leter
+        _firstDate = [[self class] dateAfterYears:-2 from:nowDate]; // 2 years ago
+        _lastDate = [[self class] dateAfterYears:2 from:nowDate]; // 2 years leter
+        calendarView.firstDate = _firstDate;
+        calendarView.lastDate = _lastDate;
         calendarView.backgroundColor = CALENDAR_BACKGROUND_COLOR;
         CGFloat onePixel = 1.0f / [UIScreen mainScreen].scale;
         calendarView.contentInset = UIEdgeInsetsMake(0.0f, onePixel, 0.0f, onePixel);
         [_calendarPositionView addSubview:calendarView];
         _calendarView = calendarView;
-    }
-
-    _adPositionView.backgroundColor = CALENDAR_BACKGROUND_COLOR;
-
-    // Create ad.
-    if (ADMOB_UNIT_ID) {
-        GADBannerView *adMobView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
-        adMobView.adUnitID = ADMOB_UNIT_ID;
-        adMobView.delegate = self;
-        adMobView.rootViewController = self;
-        [_adPositionView addSubview:adMobView];
-        _adMobView = adMobView;
         
-        [_adMobView loadRequest:[GADRequest request]];
+        _calendarView.selectedDate = [NSDate date];
     }
+    
+    _scheduleTableView.dataSource = self;
+    _scheduleTableView.delegate = self;
+
+    _eventStore = [[EKEventStore alloc] init];
 }
 
 - (void)viewDidLayoutSubviews
@@ -90,12 +90,93 @@
     [_calendarView scrollToDate:[NSDate date] animated:NO];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (!_isAlreadyShowAlertForCalendarPermmision) {
+        [self showAlertForCalendarPermmision];
+        _isAlreadyShowAlertForCalendarPermmision = YES;
+    }
+}
+
 - (void)scrollCalendarToDate:(NSDate*)date animated:(BOOL)animated
 {
     [_calendarView scrollToDate:date animated:animated];
 }
 
 #pragma mark - Private methods
+
+- (void)showAlertForCalendarPermmision
+{
+    EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
+    
+    switch (status) {
+        case EKAuthorizationStatusNotDetermined:
+        {
+            // Show alert if user don't allow calender access permission.
+            [_eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
+             {
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     if (granted) {
+                         ;
+                     } else {
+                         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
+                                                                             message:NSLocalizedString(@"Unable to allow access to events in Calendar.  Please allow calendar access from [Settings] > [Privacy] > [Calendar].", nil)
+                                                                            delegate:nil
+                                                                   cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                                   otherButtonTitles:nil];
+                         [alertView show];
+                     }
+                 });
+             }];
+            break;
+        }
+        case EKAuthorizationStatusAuthorized:
+        {
+            break;
+        }
+        case EKAuthorizationStatusRestricted:
+        {
+            // Not allowed.
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
+                                                                message:NSLocalizedString(@"Denied access to events in Calendar. Please allow calendar access from [Settings] > [General] > [Restrictions].", nil)
+                                                               delegate:nil
+                                                      cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                      otherButtonTitles:nil];
+            [alertView show];
+            break;
+        }
+        case EKAuthorizationStatusDenied:
+        {
+            // Not allowed.
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
+                                                                message:NSLocalizedString(@"Unable to allow access to events in Calendar.  Please allow calendar access from [Settings] > [Privacy] > [Calendar].", nil)
+                                                               delegate:nil
+                                                      cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                      otherButtonTitles:nil];
+            [alertView show];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (NSArray*)eventsWithDate:(NSDate*)date
+{
+    if (!date) {
+        return @[];
+    }
+
+    NSDate *endDate = [NSDate dateWithTimeInterval:(24 * 60 * 60) sinceDate:date];
+    
+    NSArray *eventCalendars = [_eventStore calendarsForEntityType:EKEntityTypeEvent];
+    NSPredicate *predicate = [_eventStore predicateForEventsWithStartDate:date
+                                                                  endDate:endDate
+                                                                calendars:eventCalendars];
+    return [_eventStore eventsMatchingPredicate:predicate];
+}
 
 + (NSDate*)dateAfterYears:(NSInteger)years from:(NSDate*)from
 {
@@ -108,58 +189,42 @@
 
 }
 
-#pragma mark - GADBannerViewDelegate method
+#pragma mark - TSQCalendarViewDelegate method
 
-- (void)adViewDidReceiveAd:(GADBannerView *)view
+- (void)calendarView:(TSQCalendarView *)calendarView didSelectDate:(NSDate *)date
 {
-#if DEBUG
-    NSLog(@"adMobView succeed loading.");
-#endif // #if DEBUG
-    
-    if (_isVisibleAdBanner == NO) {
-        [UIView animateWithDuration:AD_VIEW_ANIMATION_DURATION
-                              delay:0
-                            options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             // Move adPositionView
-                             CGRect frame = _adPositionView.frame;
-                             frame.origin.y -= _adPositionView.frame.size.height;
-                             _adPositionView.frame = frame;
-                         }
-                         completion:^(BOOL finished) {
-                             // Shrink calendar view
-                             CGRect frame = _calendarView.frame;
-                             frame.size.height -= _adPositionView.frame.size.height;
-                             _calendarView.frame = frame;
-                         }];
-        _isVisibleAdBanner = YES;
-    }
+    [_scheduleTableView reloadData];
 }
 
-- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
+#pragma mark - UITableViewDataSource methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#if DEBUG
-    NSLog(@"adMobView failed loading. error:%@", [error localizedDescription]);
-#endif // #if DEBUG
+    NSArray *events = [self eventsWithDate:_calendarView.selectedDate];
+    return events.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScheduleTableViewCell" forIndexPath:indexPath];
     
-    if (_isVisibleAdBanner) {
-        // Strech calendar view
-        CGRect frame = _calendarView.frame;
-        frame.size.height += _adPositionView.frame.size.height;
-        _calendarView.frame = frame;
-        
-        [UIView animateWithDuration:AD_VIEW_ANIMATION_DURATION
-                              delay:0
-                            options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             // Move adPositionView
-                             CGRect frame = _adPositionView.frame;
-                             frame.origin.y += _adPositionView.frame.size.height;
-                             _adPositionView.frame = frame;
-                         }
-                         completion:nil];
-        _isVisibleAdBanner = NO;
-    }
+    NSArray *events = [self eventsWithDate:_calendarView.selectedDate];
+    EKEvent *event = events[indexPath.row];
+    [cell setupEvent:event date:_calendarView.selectedDate];
+    
+    NSLog(@"%d", indexPath.row);
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
 }
 
 @end

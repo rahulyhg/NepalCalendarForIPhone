@@ -1,0 +1,3 @@
+"OK" = "OK";
+"Denied access to events in Calendar. Please allow calendar access from [Settings] > [General] > [Restrictions]." = "Denied access to events in Calendar. Please allow calendar access from [Settings] > [General] > [Restrictions].";
+"Unable to allow access to events in Calendar.  Please allow calendar access from [Settings] > [Privacy] > [Calendar]." = "Unable to allow access to events in Calendar.  Please allow calendar access from [Settings] > [Privacy] > [Calendar].";

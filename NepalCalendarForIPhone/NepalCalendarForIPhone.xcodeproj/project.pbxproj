@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1F1ED41B2B9C5C00D04BB9 /* ScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F1ED31B2B9C5C00D04BB9 /* ScheduleTableViewCell.m */; };
+		8E1F1ED71B2BB07600D04BB9 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F1ED61B2BB07600D04BB9 /* NSDate+Utilities.m */; };
 		8E3E60CF18D3E19E00964844 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3E60CE18D3E19E00964844 /* BaseViewController.m */; };
 		8E4BF27818A773F800E106C2 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEE609F18A672C0003AFD4A /* libGoogleAdMobAds.a */; };
 		8E4BF27D18A7786500E106C2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BF27C18A7786500E106C2 /* Settings.bundle */; };
 		8E4BF28018A7801500E106C2 /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4BF27F18A7801500E106C2 /* libAdapterIAd.a */; };
 		8E4BF28218A780B200E106C2 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4BF28118A780B200E106C2 /* iAd.framework */; };
+		8E6F606B1B2B32B7001622E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E6F60691B2B32B7001622E2 /* Localizable.strings */; };
 		8EC49C9318A7211200FBB7D4 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49C9218A7211200FBB7D4 /* CalendarView.m */; };
 		8EC49C9B18A7442700FBB7D4 /* CalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49C9A18A7442700FBB7D4 /* CalendarMonthHeaderCell.m */; };
 		8EC49CA818A7616E00FBB7D4 /* tab_calender.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC49CA418A7616E00FBB7D4 /* tab_calender.png */; };
@@ -63,11 +66,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E1F1ED21B2B9C5C00D04BB9 /* ScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewCell.h; sourceTree = "<group>"; };
+		8E1F1ED31B2B9C5C00D04BB9 /* ScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewCell.m; sourceTree = "<group>"; };
+		8E1F1ED51B2BB07600D04BB9 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		8E1F1ED61B2BB07600D04BB9 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		8E3E60CD18D3E19E00964844 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8E3E60CE18D3E19E00964844 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8E4BF27C18A7786500E106C2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8E4BF27F18A7801500E106C2 /* libAdapterIAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdapterIAd.a; path = NepalCalendarForIPhone/Libraries/libAdapterIAd.a; sourceTree = "<group>"; };
 		8E4BF28118A780B200E106C2 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		8E6F606A1B2B32B7001622E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8EC49C9118A7211200FBB7D4 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		8EC49C9218A7211200FBB7D4 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
 		8EC49C9918A7442700FBB7D4 /* CalendarMonthHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthHeaderCell.h; sourceTree = "<group>"; };
@@ -214,6 +222,7 @@
 				8EEE605C18A66F4C003AFD4A /* InfoPlist.strings */,
 				8EEE605F18A66F4C003AFD4A /* main.m */,
 				8EEE606118A66F4C003AFD4A /* NepalCalendarForIPhone-Prefix.pch */,
+				8E6F60691B2B32B7001622E2 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,6 +248,10 @@
 				8EC49C9A18A7442700FBB7D4 /* CalendarMonthHeaderCell.m */,
 				8EEE60DA18A69477003AFD4A /* CalendarRowCell.h */,
 				8EEE60DB18A69477003AFD4A /* CalendarRowCell.m */,
+				8E1F1ED21B2B9C5C00D04BB9 /* ScheduleTableViewCell.h */,
+				8E1F1ED31B2B9C5C00D04BB9 /* ScheduleTableViewCell.m */,
+				8E1F1ED51B2BB07600D04BB9 /* NSDate+Utilities.h */,
+				8E1F1ED61B2BB07600D04BB9 /* NSDate+Utilities.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -394,6 +407,7 @@
 				8EEE60D218A693E4003AFD4A /* CalendarRow.png in Resources */,
 				8EEE606718A66F4C003AFD4A /* Main.storyboard in Resources */,
 				8E4BF27D18A7786500E106C2 /* Settings.bundle in Resources */,
+				8E6F606B1B2B32B7001622E2 /* Localizable.strings in Resources */,
 				8EEE60D418A693E4003AFD4A /* CalendarRowBottom.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,9 +442,11 @@
 				8EC49C9B18A7442700FBB7D4 /* CalendarMonthHeaderCell.m in Sources */,
 				8EC49C9318A7211200FBB7D4 /* CalendarView.m in Sources */,
 				8EEE606018A66F4C003AFD4A /* main.m in Sources */,
+				8E1F1ED71B2BB07600D04BB9 /* NSDate+Utilities.m in Sources */,
 				8EEE60B218A6778B003AFD4A /* NepaliStringUtility.m in Sources */,
 				8EEE609E18A67247003AFD4A /* NepalTimeConfig.mm in Sources */,
 				8EEE60DC18A69477003AFD4A /* CalendarRowCell.m in Sources */,
+				8E1F1ED41B2B9C5C00D04BB9 /* ScheduleTableViewCell.m in Sources */,
 				8EEE60B518A6851D003AFD4A /* CalendarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +454,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8E6F60691B2B32B7001622E2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E6F606A1B2B32B7001622E2 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		8EEE605C18A66F4C003AFD4A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
