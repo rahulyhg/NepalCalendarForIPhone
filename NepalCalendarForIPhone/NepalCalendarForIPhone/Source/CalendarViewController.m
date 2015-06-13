@@ -216,8 +216,6 @@
     EKEvent *event = events[indexPath.row];
     [cell setupEvent:event date:_calendarView.selectedDate];
     
-    NSLog(@"%d", indexPath.row);
-    
     return cell;
 }
 
