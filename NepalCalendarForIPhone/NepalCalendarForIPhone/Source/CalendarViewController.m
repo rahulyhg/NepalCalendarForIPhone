@@ -23,7 +23,6 @@
 #import <EventKitUI/EventKitUI.h>
 #import <TimesSquare/TimesSquare.h>
 #import "CalendarViewController.h"
-#import "GoogleAdMobAds/GADBannerView.h"
 #import "NepalTimeConfig.h"
 #import "CalendarView.h"
 #import "CalendarMonthHeaderCell.h"

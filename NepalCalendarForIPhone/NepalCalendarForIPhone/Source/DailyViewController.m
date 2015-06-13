@@ -20,8 +20,8 @@
  * THE SOFTWARE.
  */
 
+#import <GoogleMobileAds/GADBannerView.h>
 #import "DailyViewController.h"
-#import "GoogleAdMobAds/GADBannerView.h"
 #import "NepalDate/NepalDate.h"
 #import "NepalDate/NepaliStringUtility.h"
 #import "NepalTimeConfig.h"
