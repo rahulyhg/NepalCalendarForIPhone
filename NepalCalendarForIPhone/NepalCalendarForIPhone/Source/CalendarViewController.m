@@ -118,7 +118,7 @@
              {
                  dispatch_async(dispatch_get_main_queue(), ^{
                      if (granted) {
-                         ;
+                         [_scheduleTableView reloadData];
                      } else {
                          UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
                                                                              message:NSLocalizedString(@"Unable to allow access to events in Calendar.  Please allow calendar access from [Settings] > [Privacy] > [Calendar].", nil)
@@ -199,6 +199,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
+    if (status != EKAuthorizationStatusAuthorized) {
+        return 0;
+    }
+
     NSArray *events = [self eventsWithDate:_calendarView.selectedDate];
     return events.count;
 }
