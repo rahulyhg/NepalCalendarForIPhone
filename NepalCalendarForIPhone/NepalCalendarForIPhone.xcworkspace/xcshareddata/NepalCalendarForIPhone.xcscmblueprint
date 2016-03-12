@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "218D7E9C8C1A714AF77A70579E5817FEF99BA63A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "218D7E9C8C1A714AF77A70579E5817FEF99BA63A" : 0,
+    "F6AB3C480DCBFA8395AD6B7D303CA49A1B4F7ACF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0CB602D6-A1A9-49CC-8FB4-CC0D5B36C271",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "218D7E9C8C1A714AF77A70579E5817FEF99BA63A" : "NepalCalendarForIPhone\/",
+    "F6AB3C480DCBFA8395AD6B7D303CA49A1B4F7ACF" : "NepalCalendarForIPhone\/NepalCalendarForIPhone\/objc-TimesSquare\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NepalCalendarForIPhone",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NepalCalendarForIPhone\/NepalCalendarForIPhone.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:yhirano\/NepalCalendarForIPhone.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "218D7E9C8C1A714AF77A70579E5817FEF99BA63A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:yhirano\/objc-TimesSquare.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F6AB3C480DCBFA8395AD6B7D303CA49A1B4F7ACF"
+    }
+  ]
+}
